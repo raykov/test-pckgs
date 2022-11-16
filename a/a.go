@@ -21,5 +21,7 @@ func init() {
 }
 
 func A() {
+	metricA.With(prometheus.Labels{"labelA": "label"}).Observe(1)
+
 	fmt.Println("Hello from A")
 }
